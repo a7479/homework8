@@ -29,9 +29,28 @@ public class Main {
         one[2] = 3;
         double[] two = {1.57, 7.654, 9.986};
         int[] three = {2, 7, 5, 8, 9};
-        System.out.println(one[0] + "," + one[1] + "," + one[2]);
-        System.out.println(two[0] + "," + two[1] + "," + two[2]);
-        System.out.println(three[0] + "," + three[1] + "," + three[2] + "," + three[3] + "," + three[4]);
+
+        for (int i = 0; i < one.length; i++) {
+            System.out.print(one[i]);
+            if (i != one.length - 1) {
+                System.out.print(", ");
+            }
+        }
+        System.out.println();
+        for (int i = 0; i < two.length; i++) {
+            System.out.print(two[i]);
+            if (i != two.length - 1) {
+                System.out.print(", ");
+            }
+        }
+        System.out.println();
+        for (int i = 0; i < three.length; i++) {
+            System.out.print(three[i]);
+            if (i != three.length - 1) {
+                System.out.print(", ");
+            }
+        }
+        System.out.println();
     }
 
     public static void task3() {
@@ -42,11 +61,29 @@ public class Main {
         one[2] = 3;
         double[] two = {1.57, 7.654, 9.986};
         int[] three = {2, 7, 5, 8, 9};
-        System.out.println(one[2] + "," + one[1] + "," + one[0]);
-        System.out.println(two[2] + "," + two[1] + "," + two[0]);
-        System.out.println(three[4] + "," + three[3] + "," + three[2] + "," + three[1] + "," + three[0]);
-
+        for (int i = one.length - 1; i >= 0; i--) {
+            System.out.print(one[i]);
+            if (i != 0) {
+                System.out.print(", ");
+            }
+        }
+        System.out.println();
+        for (int i = two.length - 1; i >= 0; i--) {
+            System.out.print(two[i]);
+            if (i != 0) {
+                System.out.print(", ");
+            }
+        }
+        System.out.println();
+        for (int i = three.length - 1; i >= 0; i--) {
+            System.out.print(three[i]);
+            if (i != 0) {
+                System.out.print(", ");
+            }
+        }
+        System.out.println();
     }
+
 
     public static void task4() {
         System.out.println("Задача 4");
@@ -59,12 +96,8 @@ public class Main {
             if (one[i] % 2 != 0) {
                 one[i] = one[i] + 1;
             }
-            /*if (i == one.length - 1) {
-              System.out.print(Arrays.toString(one));
-                break;
-            }*/
-            System.out.print(one[i]+" ");
         }
+        System.out.print(Arrays.toString(one));
     }
 }
 
